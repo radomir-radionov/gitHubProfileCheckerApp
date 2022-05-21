@@ -38,9 +38,7 @@ export const ReposContainer = styled.div`
   }
 `;
 
-export const ContainerNames = styled.div`
-  margin-top: 29px;
-`;
+export const ContainerNames = styled.div``;
 
 export const ContainerSecondary = styled.div`
   display: flex;
