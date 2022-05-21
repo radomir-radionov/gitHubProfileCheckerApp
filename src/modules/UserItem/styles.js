@@ -3,9 +3,8 @@ import { colors } from "styles";
 
 export const Container = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   width: 100%;
-
   @media (max-width: 1366px) {
     flex-direction: column;
   }
@@ -57,6 +56,7 @@ export const Img = styled.img`
 
   @media (max-width: 1366px) {
     width: 200px;
+    margin-top: 50px;
   }
 
   @media (max-width: 768px) {
