@@ -6,7 +6,7 @@ import {
 } from "redux/user/selectors";
 import { GroupIcon, PersonIcon, Union, User } from "assets/images";
 import PaginatedRepos from "modules/PaginatedRepos";
-import ErrorMessage from "modules/ErrorMessage";
+import EmptyState from "modules/EmptyState";
 import {
   Container,
   UserBox,
@@ -20,9 +20,6 @@ import {
   ContainerSecondary,
   Title,
   Icon,
-  ErrorContainer,
-  ErrorImg,
-  ErrorText,
 } from "./styles";
 
 const UserItem = () => {
@@ -31,11 +28,11 @@ const UserItem = () => {
   const errorMessage = useSelector(getErrorMessageSelector);
 
   return (
-    <Container>
+    <>
       {errorMessage ? (
-        <ErrorMessage img={User} textError="User not found" />
+        <EmptyState img={User} textError="User not found" />
       ) : (
-        <>
+        <Container>
           <UserBox>
             <ContainerNames>
               <Img src={userData.avatar_url} alt="User Image" />
@@ -61,14 +58,16 @@ const UserItem = () => {
               <PaginatedRepos itemsPerPage={4} />
             </ReposContainer>
           ) : (
-            <ErrorContainer>
-              <ErrorImg src={Union} />
-              <ErrorText>Repository list is empty</ErrorText>
-            </ErrorContainer>
+            <EmptyState
+              img={Union}
+              textError="Repository list is empty"
+              height={"500px"}
+              width={"250px"}
+            />
           )}
-        </>
+        </Container>
       )}
-    </Container>
+    </>
   );
 };
 

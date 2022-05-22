@@ -1,12 +1,12 @@
-import { SearchIcon } from "assets/images";
+import { searchIconBig } from "assets/images";
 import { Spinner } from "components";
-import { UserItem } from "modules";
+import { EmptyState, UserItem } from "modules";
 import { useSelector } from "react-redux";
 import {
   getLoadingValueSelector,
   getUserNameSelector,
 } from "redux/user/selectors";
-import { HomePageContainer, Text, Img, GreetingMessage } from "./styles";
+import { HomePageContainer } from "./styles";
 
 const HomePage = () => {
   const userName = useSelector(getUserNameSelector);
@@ -19,10 +19,10 @@ const HomePage = () => {
       ) : userName ? (
         <UserItem />
       ) : (
-        <GreetingMessage>
-          <Img src={SearchIcon} />
-          <Text>Start with searching a GitHub user</Text>
-        </GreetingMessage>
+        <EmptyState
+          img={searchIconBig}
+          textError="Start with searching a GitHub user"
+        />
       )}
     </HomePageContainer>
   );

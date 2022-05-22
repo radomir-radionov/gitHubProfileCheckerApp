@@ -5,8 +5,12 @@ export const Container = styled.div`
   display: flex;
   justify-content: flex-start;
   width: 100%;
+  padding-top: 39px;
+  padding-left: 57px;
+
   @media (max-width: 1366px) {
     flex-direction: column;
+    padding-left: 0;
   }
 `;
 
@@ -14,8 +18,6 @@ export const UserBox = styled.div`
   display: flex;
   flex-direction: column;
   text-align: left;
-  margin-top: 39px;
-  margin-left: 57px;
 
   @media (max-width: 1366px) {
     justify-content: center;
@@ -27,7 +29,7 @@ export const UserBox = styled.div`
 export const ReposContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 28px 0 50px 96px;
+  margin: 0 0 50px 96px;
   text-align: left;
 
   @media (max-width: 1366px) {
@@ -111,25 +113,5 @@ export const ErrorTitle = styled.h1`
   font-size: 22px;
   line-height: 140%;
   text-align: center;
-  color: ${colors.GRAY};
-`;
-
-export const ErrorContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  height: 600px;
-`;
-
-export const ErrorImg = styled.img``;
-
-export const ErrorText = styled.p`
-  height: 31px;
-  margin-top: 42px;
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 140%;
   color: ${colors.GRAY};
 `;

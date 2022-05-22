@@ -17,7 +17,7 @@ export const ReposContainer = styled.div`
   }
 
   @media (max-width: 380px) {
-    width: 280px;
+    width: 100%;
   }
 `;
 
