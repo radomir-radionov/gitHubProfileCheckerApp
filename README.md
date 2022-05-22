@@ -1,6 +1,6 @@
 ### Install dependencies
 ```
-npm i
+npm install
 ```
 
 ### Run app  
