@@ -1,11 +1,11 @@
 ### Install dependencies
 ```
-npm install
+yarn install
 ```
 
 ### Run app  
 ```
-npm start
+yarn start
 ```
 
 ### Main Libraries:  
