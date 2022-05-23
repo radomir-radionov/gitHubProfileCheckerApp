@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { colors } from "styles";
 
-export const Nav = styled.div`
+export const Container = styled.div`
   display: flex;
   padding: 16px 41px;
   width: 100%;

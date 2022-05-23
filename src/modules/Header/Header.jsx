@@ -1,14 +1,14 @@
 import { GitHubIcon } from "assets/images";
 import SearchBar from "modules/SearchBar";
-import { Img, Nav } from "./styles";
+import { Img, Container } from "./styles";
 
-const NavBar = () => {
+const Header = () => {
   return (
-    <Nav>
+    <Container>
       <Img src={GitHubIcon} alt="GitHubIcon" />
       <SearchBar />
-    </Nav>
+    </Container>
   );
 };
 
-export default NavBar;
+export default Header;
