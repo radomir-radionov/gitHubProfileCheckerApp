@@ -1,5 +1,5 @@
 import { all, call, put, select, takeLatest } from "redux-saga/effects";
-import { getUserReposRequest } from "requests/getUserListRepositories";
+import { getUserReposRequest } from "requests/getUserReposRequest";
 import { getUserRequest } from "requests/getUserRequest";
 import { getUserNameSelector } from "./selectors";
 import { userActions } from "./slice";
