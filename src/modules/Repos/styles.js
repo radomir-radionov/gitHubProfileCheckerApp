@@ -3,6 +3,7 @@ import { colors } from "styles";
 
 export const ReposContainer = styled.div`
   width: 877px;
+  word-break: break-all;
 
   @media (max-width: 968px) {
     width: 700px;
@@ -12,7 +13,7 @@ export const ReposContainer = styled.div`
     width: 500px;
   }
 
-  @media (max-width: 520px) {
+  @media (max-width: 548px) {
     width: 350px;
   }
 
