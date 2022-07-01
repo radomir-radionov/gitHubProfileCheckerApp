@@ -19,7 +19,12 @@ export const getLoadingValueSelector = createSelector(
   (state) => state.loading
 );
 
+export const getErrorValueSelector = createSelector(
+  user,
+  (state) => state.error.isError
+);
+
 export const getErrorMessageSelector = createSelector(
   user,
-  (state) => state.error.textError.status
+  (state) => state.error.data
 );

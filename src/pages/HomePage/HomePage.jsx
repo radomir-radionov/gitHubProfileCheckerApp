@@ -1,30 +1,32 @@
-import { searchIconBig } from "assets/images";
+import { NoUser, searchIconBig } from "assets/images";
 import { Spinner } from "components";
-import { EmptyState, UserItem } from "modules";
+import { EmptyState } from "modules";
 import { useSelector } from "react-redux";
 import {
+  getErrorValueSelector,
   getLoadingValueSelector,
-  getUserNameSelector,
 } from "redux/user/selectors";
-import { HomePageContainer } from "./styles";
+import { StyledHomePage } from "./styles";
 
 const HomePage = () => {
-  const userName = useSelector(getUserNameSelector);
   const isLoading = useSelector(getLoadingValueSelector);
+  const isError = useSelector(getErrorValueSelector);
+
+  if (isLoading) {
+    return <Spinner />;
+  }
+
+  if (isError) {
+    return <EmptyState img={NoUser} textError="User not found" />;
+  }
 
   return (
-    <HomePageContainer>
-      {isLoading ? (
-        <Spinner />
-      ) : userName ? (
-        <UserItem />
-      ) : (
-        <EmptyState
-          img={searchIconBig}
-          textError="Start with searching a GitHub user"
-        />
-      )}
-    </HomePageContainer>
+    <StyledHomePage>
+      <EmptyState
+        img={searchIconBig}
+        textError="Start with searching a GitHub user"
+      />
+    </StyledHomePage>
   );
 };
 

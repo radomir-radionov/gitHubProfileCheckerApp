@@ -5,7 +5,7 @@ import SearchIcon from "../images/searchIcon.svg";
 import searchIconBig from "../images/searchIconBig.svg";
 import RectangleLeft from "../images/rectangleLeft.svg";
 import RectangleRight from "../images/rectangleRight.svg";
-import User from "../images/user.svg";
+import NoUser from "../images/user.svg";
 import Union from "../images/union.svg";
 
 export {
@@ -15,7 +15,7 @@ export {
   SearchIcon,
   RectangleLeft,
   RectangleRight,
-  User,
+  NoUser,
   Union,
   searchIconBig,
 };

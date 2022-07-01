@@ -1,10 +1,10 @@
 import { Container, Img, TextError } from "./styles";
 
-const EmptyState = ({ img, textError, height = null, width = "220px" }) => {
+const EmptyState = ({ img, textError }) => {
   return (
-    <Container height={height}>
+    <Container>
       <Img src={img} />
-      <TextError width={width}>{textError}</TextError>
+      <TextError>{textError}</TextError>
     </Container>
   );
 };

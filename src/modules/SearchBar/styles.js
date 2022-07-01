@@ -1,30 +1,16 @@
 import styled from "styled-components";
+import { colors } from "styles";
 
-export const SearchBarContainer = styled.div`
-  margin-left: 22px;
-
-  @media (max-width: 424px) {
-    margin-left: 0;
-  }
-`;
-
-export const Form = styled.form``;
-
-export const FormInput = styled.div`
-  position: relative;
+export const Form = styled.form`
   display: flex;
   align-items: center;
-  justify-content: center;
-`;
-
-export const BoxImage = styled.span`
-  position: absolute;
-  left: 20px;
-  top: 0;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  gap: 10px;
+  flex-basis: 500px;
+  flex-shrink: 1;
+  min-height: 40px;
+  padding: 8px 20px;
+  border-radius: 6px;
+  background-color: ${colors.WHITE};
 `;
 
 export const Image = styled.img``;

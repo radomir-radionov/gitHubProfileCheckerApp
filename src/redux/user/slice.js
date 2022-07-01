@@ -6,7 +6,8 @@ const initialState = {
   userRepos: [],
   loading: false,
   error: {
-    textError: "",
+    isError: false,
+    status: null,
   },
 };
 
@@ -27,7 +28,9 @@ export const userSlice = createSlice({
       state.loading = payload;
     },
     setError: (state, { payload }) => {
-      state.error.textError = payload;
+      state.user = [];
+      state.error.isError = true;
+      state.error.status = payload;
     },
   },
 });

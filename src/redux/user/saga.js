@@ -15,10 +15,9 @@ export function* getUser() {
 
     yield put(userActions.setUserData(data));
     yield put(userActions.setUserRepos(dataRepos));
-    yield put(userActions.setError(false));
     yield put(userActions.setLoading(false));
   } catch (e) {
-    yield put(userActions.setError(e.response));
+    yield put(userActions.setError(e.response.status));
     yield put(userActions.setLoading(false));
   }
 }

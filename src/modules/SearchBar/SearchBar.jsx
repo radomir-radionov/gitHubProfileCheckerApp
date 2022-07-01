@@ -1,10 +1,10 @@
 import { SearchIcon } from "assets/images";
 import { Input } from "components";
 import { useEffect, useState } from "react";
-
 import { useDispatch } from "react-redux";
 import { userActions } from "redux/user/slice";
-import { SearchBarContainer, Form, FormInput, BoxImage, Image } from "./styles";
+import { Form, Image } from "./styles";
+import { history } from "utils";
 
 const SearchBar = () => {
   const dispatch = useDispatch();
@@ -18,6 +18,7 @@ const SearchBar = () => {
     const keyDownHandler = (event) => {
       if (event.key === "Enter") {
         event.preventDefault();
+        history.push(`../${searchText}`);
         searchText && dispatch(userActions.getUserData(searchText));
       }
     };
@@ -29,16 +30,10 @@ const SearchBar = () => {
   }, [dispatch, searchText]);
 
   return (
-    <SearchBarContainer>
-      <Form>
-        <FormInput>
-          <BoxImage>
-            <Image src={SearchIcon} alt="Search icon" />
-          </BoxImage>
-          <Input value={searchText} onChange={onChangeSearchTextInput} />
-        </FormInput>
-      </Form>
-    </SearchBarContainer>
+    <Form>
+      <Image src={SearchIcon} alt="Search icon" />
+      <Input value={searchText} onChange={onChangeSearchTextInput} />
+    </Form>
   );
 };
 

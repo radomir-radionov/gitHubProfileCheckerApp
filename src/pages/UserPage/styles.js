@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { colors } from "styles";
 
-export const StyledHomePage = styled.div`
+export const StyledUserPage = styled.div`
   display: flex;
   justify-content: center;
   flex: 1;
