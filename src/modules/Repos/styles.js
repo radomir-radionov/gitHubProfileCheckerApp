@@ -38,8 +38,8 @@ export const Page = styled.li`
   cursor: pointer;
 `;
 
-export const Title = styled.h1`
-  font-size: 32px;
+export const Title = styled.h2`
+  font-size: 2.6rem;
   font-weight: 600;
   line-height: 30px;
 `;
@@ -51,8 +51,10 @@ export const StyledText = styled.p`
 
 export const StyledPagination = styled.div`
   display: flex;
+  align-items: center;
   justify-content: end;
   margin-top: 30px;
+  font-size: 1.4rem;
 
   .pagination {
     display: flex;
@@ -60,12 +62,10 @@ export const StyledPagination = styled.div`
   }
 
   .pagination__page {
-    padding: 2px 6px;
+    padding: 1rem;
     margin-left: 16px;
-    width: 21px;
-    height: 25px;
     color: ${colors.GRAY};
-    border-radius: 3px;
+    border-radius: 6px;
   }
 
   .break {
@@ -73,7 +73,7 @@ export const StyledPagination = styled.div`
   }
 
   .page-item {
-    padding-top: 3px;
+    padding-top: 1rem;
     margin-left: 26px;
   }
 

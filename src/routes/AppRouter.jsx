@@ -1,6 +1,5 @@
 import { LayoutPage, HomePage } from "pages";
 import UserPage from "pages/UserPage/UserPage";
-
 import {
   unstable_HistoryRouter as HistoryRouter,
   Route,

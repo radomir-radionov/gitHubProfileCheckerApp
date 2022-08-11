@@ -11,6 +11,7 @@ const GlobalStyles = createGlobalStyle`
     height: 100%;
     margin: 0;
     padding: 0;
+    font-size: 62.5%;
     font-family: ${typography.FONT_FAMILY_INTER};
     color: ${colors.BLACK};
   }
@@ -35,7 +36,19 @@ const GlobalStyles = createGlobalStyle`
   input[type="search"]::-webkit-search-results-button,
   input[type="search"]::-webkit-search-results-decoration {
   display: none;
-}
+  }
+
+  @media screen and (max-width: 1024px) {
+  html {
+    font-size: 50%;
+    } 
+  }
+
+  @media screen and (max-width: 568px) {
+  html {
+    font-size: 48%;
+    }
+  }
   `;
 
 export default GlobalStyles;

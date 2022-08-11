@@ -3,14 +3,14 @@ import { colors } from "styles";
 
 export const StyledReposList = styled.div``;
 
-export const RepoBox = styled.article`
+export const Repo = styled.article`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   gap: 16px;
   margin-top: 24px;
-  padding: 24px 32px;
+  padding: 2.4rem 3.2rem;
   background: #ffffff;
   border-radius: 6px;
 
@@ -19,19 +19,20 @@ export const RepoBox = styled.article`
   }
 `;
 
-export const RepoName = styled.a`
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 29px;
+export const Link = styled.a`
   text-decoration: none;
+`;
+
+export const Title = styled.h4`
+  font-weight: 500;
+  font-size: 2.4rem;
   color: ${colors.BLUE};
 `;
 
-export const RepoDescription = styled.span`
-  font-style: normal;
+export const Description = styled.p`
+  text-align: left;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 19px;
   color: ${colors.BLACK};
 `;

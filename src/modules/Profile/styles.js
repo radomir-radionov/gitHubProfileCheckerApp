@@ -12,29 +12,32 @@ export const StyledProfile = styled.section`
 `;
 
 export const Img = styled.img`
-  width: 280px;
+  width: 28rem;
   margin-bottom: 29px;
   border-radius: 50%;
   transition-duration: 0.1s;
 
   @media (max-width: 1366px) {
-    width: 200px;
+    width: 20rem;
+  }
+
+  @media (max-width: 574px) {
+    width: 16rem;
   }
 `;
 
-export const FullName = styled.h2`
+export const FullName = styled.h3`
   display: block;
-  height: 34px;
   font-weight: 600;
-  font-size: 26px;
+  font-size: 2.6rem;
   line-height: 130%;
 `;
 
 export const UserName = styled.a`
   display: block;
-  margin-top: 12px;
+  margin-top: 1.2rem;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.8rem;
   text-decoration: none;
   line-height: 22px;
   color: ${colors.BLUE};
@@ -44,7 +47,7 @@ export const UserName = styled.a`
 export const Secondary = styled.div`
   display: flex;
   gap: 20px;
-  margin-top: 25px;
+  margin-top: 1.2rem;
 `;
 
 export const BoxSecondary = styled.div`
@@ -58,9 +61,8 @@ export const Icon = styled.img`
 `;
 
 export const SecondaryText = styled.span`
-  font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 150%;
   color: ${colors.BLACK};
 `;

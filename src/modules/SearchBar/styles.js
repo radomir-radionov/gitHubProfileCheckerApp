@@ -7,8 +7,7 @@ export const Form = styled.form`
   gap: 10px;
   flex-basis: 500px;
   flex-shrink: 1;
-  min-height: 40px;
-  padding: 8px 20px;
+  padding: 0.8rem 0.8rem 0.8rem 2.4rem;
   border-radius: 6px;
   background-color: ${colors.WHITE};
 `;

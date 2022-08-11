@@ -11,8 +11,7 @@ export const StyledHomePage = styled.div`
   background-color: ${colors.BACKGROUND};
   transition: padding 0.1s;
 
-  @media (max-width: 1024px) {
-    flex-direction: column;
+  @media (max-width: 724px) {
     align-items: center;
   }
 

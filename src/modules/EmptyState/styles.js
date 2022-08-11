@@ -11,17 +11,17 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   gap: 44px;
+  width: 210px;
 `;
 
 export const Img = styled.img`
-  width: 64px;
-  height: 64px;
+  height: 6.4rem;
+  width: 6.4rem;
 `;
 
 export const TextError = styled.p`
-  width: 210px;
   font-weight: 400;
-  font-size: 22px;
+  font-size: 2.2rem;
   text-align: center;
   line-height: 140%;
   color: ${colors.GRAY};

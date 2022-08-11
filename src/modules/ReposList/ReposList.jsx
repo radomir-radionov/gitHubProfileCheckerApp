@@ -1,18 +1,18 @@
-import { StyledReposList, RepoBox, RepoName, RepoDescription } from "./styles";
+import { StyledReposList, Repo, Link, Title, Description } from "./styles";
 
 const ReposList = ({ currentRepos }) => {
   return (
     <StyledReposList>
       {currentRepos &&
         currentRepos.map((repo) => (
-          <RepoBox key={repo.id}>
-            <RepoName href={repo.html_url} target="_blank">
-              {repo.name}
-            </RepoName>
-            <RepoDescription>
+          <Repo key={repo.id}>
+            <Link href={repo.html_url} target="_blank">
+              <Title> {repo.name}</Title>
+            </Link>
+            <Description>
               {repo.description ? repo.description : "The best app"}
-            </RepoDescription>
-          </RepoBox>
+            </Description>
+          </Repo>
         ))}
     </StyledReposList>
   );
